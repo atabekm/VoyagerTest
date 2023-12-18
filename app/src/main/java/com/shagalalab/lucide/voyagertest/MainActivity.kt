@@ -48,6 +48,8 @@ import cafe.adriel.voyager.navigator.tab.TabNavigator
 import com.shagalalab.lucide.voyagertest.ui.theme.VoyagerTestTheme
 import kotlinx.coroutines.launch
 
+var globalLoggedIn = false
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
