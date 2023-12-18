@@ -46,7 +46,7 @@ object ScreenOne : Screen {
             Button(
                 onClick = {
                     navigator.printTree("Before pushing auth screen")
-                    navigator.parent?.push(AuthScreen {
+                    navigator.parent?.parent?.push(AuthScreen {
                         navigator.printTree("Before pushing screen two")
                         navigator.push(ScreenTwo)
                         navigator.printTree("After pushing screen two")
