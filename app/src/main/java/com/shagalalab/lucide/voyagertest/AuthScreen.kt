@@ -18,10 +18,8 @@ data class AuthScreen(val onLoginSuccess: () -> Unit) : Screen {
 
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
             Button(onClick = {
-                navigator.printTree("Auth screen, before popUntilRoot")
+                globalLoggedIn = true
                 navigator.popUntilRoot()
-                navigator.printTree("Auth screen, after popUntilRoot")
-                onLoginSuccess()
             }) {
                 Text("Login")
             }

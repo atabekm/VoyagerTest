@@ -33,7 +33,11 @@ object TabOne : Tab {
 
     @Composable
     override fun Content() {
-        Navigator(ScreenOne)
+        if (globalLoggedIn) {
+            Navigator(ScreenTwo)
+        } else {
+            Navigator(ScreenOne)
+        }
     }
 }
 
